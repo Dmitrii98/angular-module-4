@@ -1,0 +1,49 @@
+<h2 class="text-align-center">Registration</h2>
+<div class="app-plate">
+  <div class="registration-form">
+    <div>
+      <div class="form__control">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Input text"
+          class="input"
+          [formControl]="nameFormControl"
+        />
+        <div *ngIf="nameFormControl.hasError('invalidField') && nameFormControl.invalid && nameFormControl.touched">
+          <p class="error_text">{{nameFormControl.getError('invalidField')}}</p>
+        </div>
+      </div>
+      <div class="form__control">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          id="email"
+          placeholder="Input text"
+          class="input"
+          [formControl]="emailFormControl"
+        />
+        <div *ngIf="emailFormControl.hasError('invalidEmail') && emailFormControl.invalid && emailFormControl.touched">
+          <p class="error_text">{{emailFormControl.getError('invalidEmail')}}</p>
+        </div>
+      </div>
+      <div class="form__control">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Input text"
+          class="input"
+          [formControl]="passwordFormControl"
+        />
+        <div *ngIf="passwordFormControl.hasError('invalidPassword') && passwordFormControl.invalid && passwordFormControl.touched">
+          <p class="error_text">{{passwordFormControl.getError('invalidPassword')}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="form__action">
+      <app-button [text]="button_text"></app-button>
+    </div>
+  </div>
+</div>
