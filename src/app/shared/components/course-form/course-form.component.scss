@@ -1,0 +1,46 @@
+@import 'src/app/shared/styles/styles';
+
+.course {
+ min-width: 60vw;
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    & input {
+      flex: 1;
+    }
+
+    & app-button {
+      margin-left: 16px;
+    }
+
+    & .course__duration {
+      margin-left: 16px;
+    }
+  }
+
+  &__authors {
+    margin-top: 8px;
+    display: flex;
+
+    &-item {
+      margin-right: 10px;
+    }
+  }
+
+  &__icon {
+    margin-left: 4px;
+    cursor: pointer;
+  }
+}
+
+.textarea{
+  width: 100%;
+  height: 100px;
+}
+
+.error_text{
+  color: #FF0000;
+}
